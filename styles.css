@@ -1,26 +1,41 @@
+/* Estilos personalizados */
 body {
-    font-family: 'Roboto', sans-serif; /* Exemplo de fonte elegante */
-  }
-  #topo {
-    background: url(img/bandeira.jpg) bottom repeat-x;	
-    height:120px;
-    margin-bottom:10px;
+  background-color: #fff;
+  color: #000;
+  font-family: 'Roboto', sens-serif;
 }
-#logomarca {
-    float: right;
+
+h1, h2, h3 {
+  font-family: 'Roboto', sans-serif;
 }
-  .navbar {
-    background-color: #343a40; /* Azul escuro */
-  }
+
+p{
+  font-family: 'Roboto', sans-serif;
+}
+
+.navbar {
+  background-color: #ADD8E6;
+}
+
+.navbar-brand, .navbar-nav .nav-link {
+  color: #fff;
+}
+
+.carousel-item {
+  height: 900px; /* Altura do carousel */
   
-  .navbar-light .navbar-nav .nav-link {
-    color: #ffffff; /* Branco */
-  }
-  
-  .carousel-inner img {
-    width: 100%;
-    height: auto;
-  }
-  
-  /* Estilos adicionais conforme necessário */
-  
+}
+
+.carousel-caption {
+  background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo da legenda */
+}
+
+.carousel-caption h5, .carousel-caption p {
+  color: #fff; /* Cor do texto da legenda */
+}
+
+.footer {
+  background-color: #3498db;
+  color: #fff;
+  text-align: center;
+}
