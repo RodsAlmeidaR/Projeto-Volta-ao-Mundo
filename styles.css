@@ -1,4 +1,3 @@
-/* Estilos personalizados */
 body {
   background-color: #fff;
   color: #000;
@@ -26,16 +25,16 @@ p{
 }
 
 .carousel-item {
-  height: 900px; /* Altura do carousel */
+  height: 900px; 
   
 }
 
 .carousel-caption {
-  background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo da legenda */
+  background-color: rgba(0, 0, 0, 0.5); 
 }
 
 .carousel-caption h5, .carousel-caption p {
-  color: #fff; /* Cor do texto da legenda */
+  color: #fff; 
 }
 
 .footer {
