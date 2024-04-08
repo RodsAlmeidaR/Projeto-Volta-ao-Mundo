@@ -10,9 +10,19 @@ h1{
 
 p{
   font-family: 'Roboto', sans-serif;
-  font-size: large;
+  font-size: 30px;
   font-style: normal;
+  font-weight: bold;
   line-height: 1.5;
+  text-align: center;
+  color: #266980;
+}
+
+h3 {
+  font-family: 'PT Serif', serif;
+  font-size: large;
+  font-style: italic;
+  line-height: 1.6;
   text-align: center;
 }
 
@@ -42,3 +52,9 @@ p{
   color: #fff;
   text-align: center;
 }
+
+.img-with-border {
+  border: 1px solid #ccc; 
+  border-radius: 10px; 
+  padding: 5px; 
+
