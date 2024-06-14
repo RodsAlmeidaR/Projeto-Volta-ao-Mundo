@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -11,30 +14,7 @@
 </head>
 <body id="azul">
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #266980 !important";>
-  <img src="img/bandeira.jpg" alt="bandeira" style="width: 30px; margin-right: 10px;">
-  <a class="navbar-brand" href="index.html">Grécia</a>
-  </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="pagCult.html">Cultura</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="pagArt.html">Arte</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="pagCl.html">Culinária</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="pagFut.html">Futebol</a>
-      </li>
-    </ul>
-  </div>
-</nav>
+<?php include 'header.php'; ?>
 
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
@@ -97,16 +77,5 @@
     Venha conhecer os sabores e as tradições que tornam a Grécia uma jornada imperdível para todos os viajantes em busca de experiências autênticas e inesquecíveis.
 </h3>
 
-<footer class="footer mt-auto py-3 custom-bg-color">
-  <div class="container">
-    <span class="text-muted custom-text-color">&copy; Projeto Volta ao Mundo - Grécia</span> <br>
-    <span class="text-muted custom-text-color">Desenvolvido por Rodrigo Rodrigues</span>
-  </div>
-</footer>
-
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
-</html>
+<?php include 'footer.php'; ?>
 
