@@ -20,10 +20,7 @@ O **Projeto Volta ao Mundo - Grécia** é uma aplicação web que fornece inform
 - **Backend**: 
   - PHP
   - MySQL
-
-- **Banco de Dados**: 
-  - SQLite
-
+    
 - **Outras Ferramentas**:
   - Git & GitHub
   - Visual Studio Code
