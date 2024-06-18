@@ -2,7 +2,7 @@
 
 ## Sobre o Projeto
 
-O **Projeto Volta ao Mundo - Grécia** é uma aplicação web que fornece informações detalhadas sobre destinos turísticos na Grécia. Meu objetivo é oferecer uma experiência rica e interativa para os usuários que desejam explorar a cultura, história e beleza natural da Grécia.
+O **Projeto Volta ao Mundo - Grécia** é uma aplicação web que fornece informações sobre a Grécia. Meu objetivo é oferecer uma experiência rica e interativa para os usuários que desejam explorar a cultura, história e beleza natural da Grécia.
 
 ## Funcionalidades
 
