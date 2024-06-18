@@ -1,23 +1,30 @@
 <?php
-if (session_status() === PHP_SESSION_NONE) {
+// Inicia a sessão se ainda não estiver iniciada
+if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
 
+// Lógica para mostrar os botões de login, registro, logout e dashboard dinamicamente
+$loginButton = '<a class="nav-link" href="login.php">Login</a>';
+$registerButton = '<a class="nav-link" href="register.php">Registro</a>';
 $logoutButton = '';
-$adminButton = '';
-$loginButton = '';
-$registerButton = '';
+$dashboardButton = '';
 
 if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
     $logoutButton = '<a class="nav-link" href="logout.php">Logout</a>';
-    if ($_SESSION['role'] === 'admin') {
-        $adminButton = '<a class="nav-link" href="admin.php">Painel Administrativo</a>';
+    
+    // Verifica se é administrador
+    if (isset($_SESSION['user_role']) && $_SESSION['user_role'] === 'admin') {
+        $dashboardButton = '<a class="nav-link" href="admin.php">Dashboard</a>';
     }
 } else {
+    // Usuário não logado, mostrar botão de login e registro
     $loginButton = '<a class="nav-link" href="login.php">Login</a>';
     $registerButton = '<a class="nav-link" href="register.php">Registro</a>';
 }
+
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -40,31 +47,34 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
-        <a class="nav-link" href="pagCult.html">Cultura</a>
+        <a class="nav-link" href="pagCult.php">Cultura</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="pagArt.html">Arte</a>
+        <a class="nav-link" href="pagArt.php">Arte</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="pagCl.html">Culinária</a>
+        <a class="nav-link" href="pagCl.php">Culinária</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="pagFut.html">Futebol</a>
+        <a class="nav-link" href="pagFut.php">Futebol</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="comentarios.php">Comentários</a>
       </li>
       <?php
+      if (!empty($dashboardButton)) {
+          echo '<li class="nav-item">' . $dashboardButton . '</li>';
+      }
       if (!empty($logoutButton)) {
-          echo '<li class="nav-item">' . $logoutButton . '</li>';
-      }
-      if (!empty($adminButton)) {
-          echo '<li class="nav-item">' . $adminButton . '</li>';
-      }
-      if (!empty($loginButton)) {
+        echo '<li class="nav-item">' . $logoutButton . '</li>';
+    }
+      if (empty($_SESSION['loggedin'])) {
           echo '<li class="nav-item">' . $loginButton . '</li>';
-      }
-      if (!empty($registerButton)) {
           echo '<li class="nav-item">' . $registerButton . '</li>';
       }
       ?>
     </ul>
   </div>
 </nav>
+
+<br>

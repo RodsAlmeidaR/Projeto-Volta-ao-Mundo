@@ -76,7 +76,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body id="azul">
+<body style="background-color:white;">
 
 <?php include 'header.php'; ?>
 
@@ -105,7 +105,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <div class="form-group">
                             <button type="submit" class="btn btn-primary btn-block">Registrar</button>
                         </div>
-                        <div class="card-footer text-center">
+                        <div class="text-center">
             Já possui conta? <a href="login.php">Logar</a>.
         </div>
                     </form>
@@ -114,6 +114,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
     </div>
 </div>
+
+<br>
+<br>
 
 <?php include 'footer.php'; ?>
 

@@ -1,5 +1,7 @@
 <?php
-session_start();
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
 include 'db_connect.php';
 
 // Verifica se o formulário foi submetido
@@ -18,6 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Verifica se o usuário existe e se a senha está correta
     if ($user && password_verify($password, $user['password'])) {
+        $_SESSION['loggedin'] = true;
         $_SESSION['user_id'] = $user['id'];
         $_SESSION['username'] = $user['username'];
         $_SESSION['user_role'] = $user['role'];
@@ -40,7 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body id="azul">
+<body style="background-color:white;">
 
 <?php include 'header.php'; ?>
 
@@ -66,7 +69,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <button type="submit" class="btn btn-primary btn-block">Login</button>
             </form>
         </div>
-        <div class="card-footer text-center">
+        <div class="text-center">
             Não tem uma conta? <a href="register.php">Registre-se aqui</a>.
         </div>
     </div>

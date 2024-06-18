@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -9,37 +12,9 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body style="background: white;">
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #266980 !important";>
-  <img src="img/bandeira.jpg" alt="bandeira" style="width: 30px; margin-right: 10px;">
-  <a class="navbar-brand" href="index.php">Grécia</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="pagCult.html">Cultura</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="pagArt.html">Arte</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="pagCl.html">Culinária</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="pagFut.html">Futebol</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="login.php">Login</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="register.php">Registro</a>
-      </li>
-    </ul>
-  </div>
-</nav>
+<?php include 'header.php'; ?>
 
 <br>
 
@@ -80,12 +55,7 @@
 
 <br>
 
-<footer class="footer mt-auto py-3 custom-bg-color">
-  <div class="container">
-    <span class="text-muted custom-text-color">&copy; Projeto Volta ao Mundo - Grécia</span> <br>
-    <span class="text-muted custom-text-color">Desenvolvido por Rodrigo Rodrigues</span>
-  </div>
-</footer>
+<?php include 'footer.php'; ?>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
